@@ -25,7 +25,13 @@ from .forms import (
     AppointmentForm, PrescriptionForm, MedicineForm, StockUpdateForm,
     FeedbackForm, MedicalRecordForm, DirectStaffRegistrationForm, StaffProfileUpdateForm
 )
+def home_view(request):
+    # NOT 'index.html' 
+    # Use 'app_name/filename.html'
+    return render(request, 'hospital/index.html')
 
+def login_view(request):
+    return render(request, 'hospital/login.html')
 
 # ═══════════════════════════════════════════════════════════
 #  DECORATORS / HELPERS
